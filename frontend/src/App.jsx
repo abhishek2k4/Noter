@@ -1,9 +1,27 @@
-import React from 'react'
+import React from "react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import CreateNote from "./pages/CreateNote";
 
-const App = () => {
+function App() {
   return (
-    <div>App</div>
-  )
+    <>
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Main Content */}
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create-note" element={<CreateNote />} />
+        </Routes>
+      </main>
+
+      {/* Footer  */}
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
