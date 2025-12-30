@@ -1,4 +1,4 @@
-import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -14,7 +14,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/create-note" element={<CreateNote />} />
+          <Route path="/create" element={<CreateNote />} />
         </Routes>
       </main>
 
