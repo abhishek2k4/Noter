@@ -6,12 +6,12 @@ import CreateNote from "./pages/CreateNote";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen bg-gray-900 text-white">
       {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
-      <main>
+      <main className="flex-1 container mx-auto p-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateNote />} />
@@ -20,7 +20,7 @@ function App() {
 
       {/* Footer  */}
       <Footer />
-    </>
+    </div>
   );
 }
 
