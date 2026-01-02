@@ -1,20 +1,20 @@
-import React, { useContext, useState } from 'react'
-import { NoteContext } from '../context/NoteContext'
+import React, { useContext, useState } from "react";
+import { NoteContext } from "../context/NoteContext";
 
-function Notecard({note}) {
-    const {deleteNote,updateNote}=useContext(NoteContext)
-    const [isEditing,setIsEditing]=useState(false)
-    const [editData,setEditData]=useState({
-        title:note.title,
-        content:note.content
-    })
+function Notecard({ note }) {
+  const { deleteNote, updateNote } = useContext(NoteContext);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editData, setEditData] = useState({
+    title: note.title,
+    content: note.content,
+  });
 
-    const handleUpdate=()=>{
-        updateNote(note._id,editData)
-        setIsEditing(false)
-    }
+  const handleUpdate = () => {
+    updateNote(note._id, editData);
+    setIsEditing(false);
+  };
   return (
-     <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all p-5 flex flex-col">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-md hover:shadow-lg transition-all p-5 flex flex-col">
       {isEditing ? (
         <>
           {/* Edit Mode */}
@@ -25,7 +25,9 @@ function Notecard({note}) {
                        bg-white dark:bg-gray-700 
                        text-gray-900 dark:text-white"
             value={editData.title}
-            onChange={(e) => setEditData({ ...editData, title: e.target.value })}
+            onChange={(e) =>
+              setEditData({ ...editData, title: e.target.value })
+            }
           />
           <textarea
             className="border rounded-lg p-2 w-full mb-3 
@@ -91,7 +93,7 @@ function Notecard({note}) {
         </>
       )}
     </div>
-  )
+  );
 }
 
-export default Notecard
+export default Notecard;
