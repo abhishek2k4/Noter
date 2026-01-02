@@ -1,12 +1,12 @@
-import React from 'react'
-import NoteForm from '../components/NoteForm'
+import React from "react";
+import NoteForm from "../components/NoteForm";
 
 function CreateNote() {
-  return (
-    <div className='flex items-center justify-center h-screen bg-gray-900'>
-      <NoteForm/>
-    </div>
-  )
+    return (
+        <div className="flex items-center justify-center h-screen bg-gray-900">
+            <NoteForm />
+        </div>
+    );
 }
 
-export default CreateNote
+export default CreateNote;
