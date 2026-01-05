@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { NoteContext } from "../context/NoteContext";
 
-function Noteform() {
+function NoteForm() {
     const { createNote } = useContext(NoteContext);
     const [note, setNote] = useState({
         title: "",
@@ -49,4 +49,4 @@ function Noteform() {
     );
 }
 
-export default Noteform;
+export default NoteForm;
