@@ -10,7 +10,7 @@ function App() {
             {/* Navbar */}
             <Navbar />
 
-            <p>This is a public notes board. Leave a note so I know you were here 🙂</p>
+            <center><p className="text-gray-400">This is a public notes board. Leave a note so I know you were here 🙂</p></center>
 
             {/* Main Content */}
             <main className="flex-1 container mx-auto p-4">
