@@ -12,12 +12,13 @@
     "dotenv": "^17.2.3",
     "express": "4.21.2",
     "mongoose": "^9.1.0",
-  "debug": "4.3.4"
+    "path-to-regexp": "0.1.7",
+    "debug": "4.3.4"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
   },
   "engines": {
-  "node": "20.x"
+    "node": "20.x"
   }
 }
